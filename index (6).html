@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FindsBug — Find Bugs. Earn Rewards.</title>
+<meta name="description" content="Modern bug bounty platform where security researchers discover vulnerabilities, report bugs, and earn rewards from real projects." />
+<meta property="og:title" content="FindsBug — Find Bugs. Earn Rewards." />
+<meta property="og:description" content="Join a modern bug bounty platform. Test real apps, report vulnerabilities, get paid." />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --background: oklch(0.16 0.03 160);
+    --foreground: oklch(0.97 0.02 150);
+    --card: oklch(0.21 0.035 160);
+    --primary: oklch(0.78 0.21 152);
+    --primary-foreground: oklch(0.15 0.04 160);
+    --primary-glow: oklch(0.88 0.22 150);
+    --muted-foreground: oklch(0.72 0.04 155);
+    --border: oklch(0.3 0.04 160 / 60%);
+    --gradient-hero: radial-gradient(ellipse at top, oklch(0.32 0.12 152 / 0.6), transparent 60%), linear-gradient(180deg, oklch(0.18 0.04 160), oklch(0.13 0.03 160));
+    --gradient-primary: linear-gradient(135deg, oklch(0.78 0.21 152), oklch(0.88 0.22 150));
+    --shadow-glow: 0 0 60px -10px oklch(0.78 0.21 152 / 0.45);
+  }
+  html, body { background: var(--background); color: var(--foreground); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .bg-bg { background: var(--background); }
+  .bg-card { background: var(--card); }
+  .bg-card-50 { background: color-mix(in oklab, var(--card) 50%, transparent); }
+  .bg-card-30 { background: color-mix(in oklab, var(--card) 30%, transparent); }
+  .bg-bg-60 { background: color-mix(in oklab, var(--background) 60%, transparent); }
+  .bg-bg-70 { background: color-mix(in oklab, var(--background) 70%, transparent); }
+  .text-fg { color: var(--foreground); }
+  .text-primary { color: var(--primary); }
+  .text-muted { color: var(--muted-foreground); }
+  .bg-primary { background: var(--primary); }
+  .text-primary-fg { color: var(--primary-foreground); }
+  .bg-primary-15 { background: color-mix(in oklab, var(--primary) 15%, transparent); }
+  .bg-primary-10 { background: color-mix(in oklab, var(--primary) 10%, transparent); }
+  .border-default { border-color: var(--border); }
+  .border-primary-30 { border-color: color-mix(in oklab, var(--primary) 30%, transparent); }
+  .border-primary-40:hover { border-color: color-mix(in oklab, var(--primary) 40%, transparent); }
+  .gradient-hero { background: var(--gradient-hero); }
+  .gradient-text { background: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .glow { box-shadow: var(--shadow-glow); }
+  .grid-bg {
+    background-image: linear-gradient(var(--border) 1px,transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: radial-gradient(ellipse at center, black, transparent 70%);
+            mask-image: radial-gradient(ellipse at center, black, transparent 70%);
+    opacity: .3;
+  }
+  .btn-primary { background: var(--primary); color: var(--primary-foreground); transition: opacity .15s; }
+  .btn-primary:hover { opacity: .9; }
+  .btn-outline { border: 1px solid var(--border); background: color-mix(in oklab, var(--background) 50%, transparent); color: var(--foreground); }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .chev { transform: rotate(180deg); }
+  .chev { transition: transform .2s; display: inline-block; }
+</style>
+</head>
+<body>
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 border-b border-default bg-bg-70 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-2">
+        <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-15 text-primary text-lg">🐞</div>
+        <span class="text-lg font-bold tracking-tight">FindsBug</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-muted">
+        <a href="#features" class="hover:text-fg">Features</a>
+        <a href="#how" class="hover:text-fg">How it works</a>
+        <a href="#rewards" class="hover:text-fg">Rewards</a>
+        <a href="#faq" class="hover:text-fg">FAQ</a>
+      </nav>
+      <button class="btn-primary rounded-md px-4 py-2 text-sm font-medium">Coming Soon</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden gradient-hero">
+    <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+    <div class="relative mx-auto max-w-7xl px-6 pb-24 pt-20 md:pt-28">
+      <div class="mx-auto max-w-3xl text-center">
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-30 bg-primary-10 px-4 py-1.5 text-xs font-medium text-primary">
+          ✨ Coming Soon · Modern Bug Bounty Platform
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight">
+          Find Bugs. <span class="gradient-text">Earn Rewards.</span>
+        </h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-muted">
+          Join a modern bug bounty platform where security researchers and tech enthusiasts can discover app vulnerabilities, report bugs, and earn rewards from real projects.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <button class="btn-primary glow rounded-md px-6 py-3 font-medium">Start Hunting Bugs Today →</button>
+          <button class="btn-outline rounded-md px-6 py-3 font-medium">Learn More</button>
+        </div>
+        <div class="mx-auto mt-12 grid max-w-2xl grid-cols-1 sm:grid-cols-2 gap-3 text-left">
+          <div class="flex items-center gap-2 text-sm text-muted"><span class="text-primary">✓</span> Report website &amp; app vulnerabilities</div>
+          <div class="flex items-center gap-2 text-sm text-muted"><span class="text-primary">✓</span> Earn rewards for valid submissions</div>
+          <div class="flex items-center gap-2 text-sm text-muted"><span class="text-primary">✓</span> Work with real startups &amp; brands</div>
+          <div class="flex items-center gap-2 text-sm text-muted"><span class="text-primary">✓</span> Build your cybersecurity profile</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="mx-auto max-w-5xl px-6 py-24 text-center">
+    <p class="text-sm font-medium uppercase tracking-widest text-primary">About the platform</p>
+    <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight">A bridge between hunters and companies</h2>
+    <p class="mx-auto mt-5 max-w-3xl text-muted">
+      Our platform connects ethical hackers and bug hunters with companies looking to improve their app security. Users can test applications, identify issues, and submit detailed reports to earn rewards after verification.
+    </p>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="mx-auto max-w-7xl px-6 py-20">
+    <div class="mb-12 text-center">
+      <p class="text-sm font-medium uppercase tracking-widest text-primary">Features</p>
+      <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight">Everything you need to hunt</h2>
+    </div>
+    <div id="features-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <!-- How -->
+  <section id="how" class="border-y border-default bg-card-30 py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="mb-12 text-center">
+        <p class="text-sm font-medium uppercase tracking-widest text-primary">How it works</p>
+        <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight">Six steps to your first reward</h2>
+      </div>
+      <div id="steps-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="mx-auto max-w-7xl px-6 py-24">
+    <div class="mb-12 text-center">
+      <p class="text-sm font-medium uppercase tracking-widest text-primary">Bug categories</p>
+      <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight">What you can hunt for</h2>
+    </div>
+    <div id="cats-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3"></div>
+  </section>
+
+  <!-- Rewards -->
+  <section id="rewards" class="mx-auto max-w-6xl px-6 py-20">
+    <div class="overflow-hidden rounded-3xl border border-primary-30 p-10 md:p-14 gradient-hero">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <p class="text-sm font-medium uppercase tracking-widest text-primary">Rewards</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight">Earn based on severity</h2>
+          <p class="mt-4 text-muted">Higher-impact and higher-quality bug reports receive better rewards and recognition. Top researchers also earn badges, rankings, and exclusive opportunities.</p>
+        </div>
+        <ul id="rewards-list" class="space-y-3"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why + Community -->
+  <section class="mx-auto max-w-7xl px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="rounded-2xl border border-default bg-card p-8">
+        <div class="text-2xl text-primary">🛡️</div>
+        <h3 class="mt-4 text-2xl font-bold">Why join us</h3>
+        <ul id="why-list" class="mt-5 grid gap-2.5"></ul>
+      </div>
+      <div class="rounded-2xl border border-default bg-card p-8">
+        <div class="text-2xl text-primary">👥</div>
+        <h3 class="mt-4 text-2xl font-bold">A community of hunters</h3>
+        <p class="mt-3 text-sm text-muted">Connect with bug hunters, share knowledge, and improve your testing skills through challenges, discussions, and community events.</p>
+        <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+          <div class="rounded-xl border border-default bg-bg-60 p-4"><div class="text-lg font-bold text-primary">Soon</div><div class="mt-1 text-xs text-muted">Hunters</div></div>
+          <div class="rounded-xl border border-default bg-bg-60 p-4"><div class="text-lg font-bold text-primary">Soon</div><div class="mt-1 text-xs text-muted">Programs</div></div>
+          <div class="rounded-xl border border-default bg-bg-60 p-4"><div class="text-lg font-bold text-primary">Soon</div><div class="mt-1 text-xs text-muted">Rewards</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mx-auto max-w-3xl px-6 py-20">
+    <div class="mb-10 text-center">
+      <p class="text-sm font-medium uppercase tracking-widest text-primary">FAQ</p>
+      <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight">Frequently asked</h2>
+    </div>
+    <div id="faq-list" class="rounded-2xl border border-default bg-card px-6 divide-y" style="--tw-divide-opacity:1;"></div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-5xl px-6 pb-20">
+    <div class="rounded-3xl border border-primary-30 bg-card p-10 md:p-14 text-center glow">
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Ready to start bug hunting?</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-muted">Create your account, explore live programs, and help apps become more secure through ethical testing.</p>
+      <p class="mt-3 text-sm text-primary">Coming soon — the platform is launching shortly.</p>
+      <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+        <button class="btn-primary rounded-md px-6 py-3 font-medium">Notify Me →</button>
+        <a href="mailto:findsbug@gmail.com" class="btn-outline rounded-md px-6 py-3 font-medium inline-flex items-center gap-2">✉️ findsbug@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-default py-10">
+    <div class="mx-auto flex max-w-7xl flex-col md:flex-row items-center justify-between gap-4 px-6 text-sm text-muted">
+      <div>🐞 © <span id="yr"></span> FindsBug. All rights reserved.</div>
+      <div>For collaborations: <a href="mailto:findsbug@gmail.com" class="text-primary hover:underline">findsbug@gmail.com</a></div>
+    </div>
+  </footer>
+
+<script>
+  const features = [
+    ["🐛","Real Bug Hunting Opportunities","Access live websites and mobile apps where companies need security testing."],
+    ["🏆","Earn Rewards","Get paid for approved bug reports based on severity and impact."],
+    ["✨","Beginner Friendly","Simple dashboard and guided reporting process for new users."],
+    ["⚡","Fast Review System","Reports are reviewed quickly by experts and companies."],
+    ["🔒","Secure Reporting","Private and encrypted submission system to protect researcher data."],
+    ["🥇","Leaderboards & Rankings","Climb rankings by submitting high-quality bug reports."],
+  ];
+  const steps = [
+    ["01","Create Account","Sign up and complete your bug hunter profile."],
+    ["02","Choose a Program","Browse active apps, websites, and testing programs."],
+    ["03","Find Vulnerabilities","Test applications ethically and identify security issues."],
+    ["04","Submit Report","Provide screenshots, steps to reproduce, and impact details."],
+    ["05","Get Verified","Experts review your report and validate the issue."],
+    ["06","Earn Rewards","Receive rewards for approved vulnerabilities."],
+  ];
+  const categories = ["🔑 Authentication Issues","🚫 Broken Access Control","🌐 API Vulnerabilities","🎨 UI/UX Bugs","💳 Payment Issues","🗄️ Data Exposure","</> XSS Vulnerabilities","💻 SQL Injection","🔐 OTP & Login Bugs","📈 Performance Bugs","📱 Mobile App Security","🔀 Logic Errors"];
+  const rewards = ["Bug severity","Report quality","Reproducibility","Impact on application security","Uniqueness of the vulnerability"];
+  const whyJoin = ["Improve cybersecurity skills","Work on real applications","Earn money online","Build a public reputation","Learn ethical hacking practically","Join a growing bug hunter community"];
+  const faqs = [
+    ["Is this legal?","Yes. All testing happens under authorized bug bounty programs."],
+    ["Do beginners earn rewards?","Yes. Even simple valid bugs can receive rewards."],
+    ["How are rewards paid?","Rewards are transferred after successful report approval."],
+    ["What makes a valid bug?","A reproducible issue that impacts functionality, security, or user experience."],
+  ];
+
+  document.getElementById('features-grid').innerHTML = features.map(([i,t,d]) => `
+    <div class="rounded-2xl border border-default bg-card p-6 hover:border-primary-40 transition">
+      <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary-15 text-xl">${i}</div>
+      <h3 class="text-lg font-semibold">${t}</h3>
+      <p class="mt-2 text-sm text-muted">${d}</p>
+    </div>`).join('');
+
+  document.getElementById('steps-grid').innerHTML = steps.map(([n,t,d]) => `
+    <div class="rounded-2xl border border-default bg-bg p-6">
+      <div class="text-3xl font-bold text-primary" style="opacity:.85">${n}</div>
+      <h3 class="mt-3 text-lg font-semibold">${t}</h3>
+      <p class="mt-1.5 text-sm text-muted">${d}</p>
+    </div>`).join('');
+
+  document.getElementById('cats-grid').innerHTML = categories.map(c => `
+    <div class="flex items-center gap-3 rounded-xl border border-default bg-card px-4 py-3 text-sm hover:border-primary-40 transition">${c}</div>`).join('');
+
+  document.getElementById('rewards-list').innerHTML = rewards.map(t => `
+    <li class="flex items-center gap-3 rounded-xl border border-default bg-bg-60 px-4 py-3 text-sm"><span class="text-primary">🏆</span> ${t}</li>`).join('');
+
+  document.getElementById('why-list').innerHTML = whyJoin.map(t => `
+    <li class="flex items-center gap-2 text-sm text-muted"><span class="text-primary">✓</span> ${t}</li>`).join('');
+
+  document.getElementById('faq-list').innerHTML = faqs.map(([q,a]) => `
+    <details class="py-4 border-b border-default last:border-0">
+      <summary class="flex items-center justify-between font-medium">${q}<span class="chev text-muted">▾</span></summary>
+      <p class="mt-3 text-sm text-muted">${a}</p>
+    </details>`).join('');
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
